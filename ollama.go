@@ -35,7 +35,7 @@ func (c *Client) ProcessAIResponse(input, userPrompt string) string {
 	%s
 	Input: %s
 
-	Respond briefly and clearly.`, userPrompt, c.conversationHistory, input)
+	`, userPrompt, c.conversationHistory, input)
 
 	requestBody, err := json.Marshal(map[string]string{
 		"model":  c.Model,
